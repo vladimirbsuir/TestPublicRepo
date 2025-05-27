@@ -28,26 +28,34 @@ Ensure you have the following software installed:
 3) ### Implement methods to meet the requirements.
     - Write Sql in @Query(value = "", nativeQuery = true) in SessionRepository.getFirstDesktopSession() so it returns **the first(earliest)** **desktop** Session
     - Implement SessionService.getFirstDesktopSession()  using SessionRepository.getFirstDesktopSession() so it returns **the first(earliest)** **desktop** Session
-    - Write Sql in @Query(value = "", nativeQuery = true) in SessionRepository.getSessionsFromActiveUsersEndedBefore2025() so it returns only Sessions from **Active** users that were **ended before 2025**
-    - Implement SessionService.getSessionsFromActiveUsersEndedBefore2025()  using SessionRepository.getSessionsFromActiveUsersEndedBefore2025() so it returns only Sessions from **Active** users that were **ended before 2025**
+    - -----
+    - Write Sql in @Query(value = "", nativeQuery = true) in SessionRepository.getSessionsFromActiveUsersEndedBefore2025() so it returns only Sessions from **Active** users that were **ended before 2025 sort by startedAtUtc in descending order**
+    - Implement SessionService.getSessionsFromActiveUsersEndedBefore2025()  using SessionRepository.getSessionsFromActiveUsersEndedBefore2025() so it returns only Sessions from **Active** users that were **ended before 2025 sort by startedAtUtc in descending order**
+    - -----
     - Write Sql in @Query(value = "", nativeQuery = true) in UserRepository.getUserWithMostSessions() so it returns a User with **the biggest amount** of sessions
     - Implement UserService.getUserWithMostSessions() method of UserService using UserRepository.getUserWithMostSessions() so it returns a User with **the biggest amount** of sessions
-    - Write Sql in @Query(value = "", nativeQuery = true) in UserRepository.getUsersWithAtLeastOneMobileSession() so it returns Users that has **at least 1 Mobile** session
-    - Implement UserService.getUsersWithAtLeastOneMobileSession() method of UserService using UserRepository.getUsersWithAtLeastOneMobileSession()  so it returns Users that has **at least 1 Mobile** session
+    - -----
+    - Write Sql in @Query(value = "", nativeQuery = true) in UserRepository.getUsersWithAtLeastOneMobileSession() so it returns Users that has **at least 1 Mobile session sort by startedAtUtc in descending order**
+    - Implement UserService.getUsersWithAtLeastOneMobileSession() method of UserService using UserRepository.getUsersWithAtLeastOneMobileSession()  so it returns Users that has **at least 1 Mobile session sort by startedAtUtc in descending order**
     
     **IMPORTANT**:  Do **NOT** change any files except of SessionService, UserService, SessionRepository, UserRepository
 <br><br>
+4) ### Check that all Api's returns responce with 200 ok status and correct data
+   - http://localhost:8080/api/sessions/active-users-ended-before-2025 ( eturns only Sessions from **Active** users that were **ended before 2025 sort by startedAtUtc in descending order** )
+   - http://localhost:8080/api/sessions/first-desktop ( returns **the first(earliest)** **desktop** Session )
+   - http://localhost:8080/api/users/most-active ( returns a User with **the biggest amount** of sessions )
+   - http://localhost:8080/api/users/with-mobile-sessions ( returns Users that has **at least 1 Mobile session sort by startedAtUtc in descending order** )
 
-3) ### Commit and push your code
+5) ### Commit and push your code
 <br><br>
 
-4) ### Provide us a **link** to your fork of the test-task repository
+6) ### Provide us a **link** to your fork of the test-task repository
 <div style="margin-left: 10%">
     <img src="https://github.com/user-attachments/assets/d0de99c3-5786-4306-a5f0-1d558c43744d" width="80%" alt="Check the commited code and provide the url">
 </div>
 <br><br>
 
-5) ### **Do NOT** contribute against the original test-task repository
+7) ### **Do NOT** contribute against the original test-task repository
 <div style="margin-left: 10%">
     <img src="https://github.com/user-attachments/assets/91433d67-6883-4fed-b7ad-bf6421fe6e8c" width="80%" alt="Do not contribute to the original repo">
 </div>
