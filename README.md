@@ -35,13 +35,13 @@ Ensure you have the following software installed:
     - Write Sql in @Query(value = "", nativeQuery = true) in UserRepository.getUserWithMostSessions() so it returns a User with **the biggest amount** of sessions
     - Implement UserService.getUserWithMostSessions() method of UserService using UserRepository.getUserWithMostSessions() so it returns a User with **the biggest amount** of sessions
     - -----
-    - Write Sql in @Query(value = "", nativeQuery = true) in UserRepository.getUsersWithAtLeastOneMobileSession() so it returns Users that has **at least 1 Mobile session sort by startedAtUtc in descending order**
-    - Implement UserService.getUsersWithAtLeastOneMobileSession() method of UserService using UserRepository.getUsersWithAtLeastOneMobileSession()  so it returns Users that has **at least 1 Mobile session sort by startedAtUtc in descending order**
+    - Write Sql in @Query(value = "", nativeQuery = true) in UserRepository.getUsersWithAtLeastOneMobileSession() so it returns Users that have **at least 1 Mobile session sort by startedAtUtc in descending order**
+    - Implement UserService.getUsersWithAtLeastOneMobileSession() method of UserService using UserRepository.getUsersWithAtLeastOneMobileSession()  so it returns Users that have **at least 1 Mobile session sort by startedAtUtc in descending order**
     
     **IMPORTANT**:  Do **NOT** change any files except of SessionService, UserService, SessionRepository, UserRepository
 <br><br>
-4) ### Check that all Api's returns responce with 200 ok status and correct data
-   - http://localhost:8080/api/sessions/active-users-ended-before-2025 ( eturns only Sessions from **Active** users that were **ended before 2025 sort by startedAtUtc in descending order** )
+4) ### Check that all Api's returns response with 200 ok status and correct data
+   - http://localhost:8080/api/sessions/active-users-ended-before-2025 ( returns only Sessions from **Active** users that were **ended before 2025 sort by startedAtUtc in descending order** )
    - http://localhost:8080/api/sessions/first-desktop ( returns **the first(earliest)** **desktop** Session )
    - http://localhost:8080/api/users/most-active ( returns a User with **the biggest amount** of sessions )
    - http://localhost:8080/api/users/with-mobile-sessions ( returns Users that has **at least 1 Mobile session sort by startedAtUtc in descending order** )
